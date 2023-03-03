@@ -108,7 +108,7 @@ venv.sh                  Activate the environment created with virtualenv
 
 To run the project tests, execute the following command:
 
-````bash
+```bash
 # run unit tests
 $ ./scripts/tests.sh unit
 
