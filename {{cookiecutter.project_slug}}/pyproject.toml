@@ -1,0 +1,105 @@
+[tool.poetry]
+name = "fastapi-ddd-template"
+version = "0.0.1"
+description = "FastAPI Domain Driven Design (DDD) template"
+authors = ["Agustín Marchi <agusmdev@gmail.com>"]
+license = "LICENSE"
+readme = "README.md"
+
+packages = [
+    { include = "app/**/*.py" },
+]
+exclude = ["tests/*"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+uvicorn = "^0.20.0"
+fastapi = "^0.92.0"
+dependency-injector = "^4.41.0"
+python-dotenv = "^0.21.1"
+simplejson = "^3.18.3"
+httpx = "^0.23.3"
+pydantic-factories = "^1.17.2"
+
+[tool.poetry.dev-dependencies]
+black = "^23.1.0"
+ruff = "^0.0.253"
+pre-commit = "^3.0.4"
+pytest = "^7.2.1"
+pytest-asyncio = "^0.20.3"
+pytest-cov = "^4.0.0"
+
+
+[build-system]
+requires = [
+    "poetry-core>=1.0.0"
+]
+
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+line-length = 100
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.pytest.ini_options]
+addopts = "--verbose --cov-report term --cov-report html --cov=."
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "*__init__*",
+    ".venv/*",
+]
+
+[tool.coverage.report]
+omit = [
+    "*__init__*",
+    ".venv/*",
+    "tests/*",
+    "app/core/db*", # This should be an external package
+    "notebooks/*",
+]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]

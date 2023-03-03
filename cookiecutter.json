@@ -1,0 +1,5 @@
+{
+    "project_name": "Your new DDD FastAPI project",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "first_entity": "your_first_entity"
+}
