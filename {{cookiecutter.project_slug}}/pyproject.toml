@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "fastapi-ddd-template"
+name = "{{cookiecutter.project_name}}"
 version = "0.0.1"
-description = "FastAPI Domain Driven Design (DDD) template"
-authors = ["Agustín Marchi <agusmdev@gmail.com>"]
+description = "{{cookiecutter.project_description}}"
+authors = ["{{cookiecutter.project_author}}"]
 license = "LICENSE"
 readme = "README.md"
 
@@ -17,7 +17,6 @@ uvicorn = "^0.20.0"
 fastapi = "^0.92.0"
 dependency-injector = "^4.41.0"
 python-dotenv = "^0.21.1"
-simplejson = "^3.18.3"
 httpx = "^0.23.3"
 pydantic-factories = "^1.17.2"
 

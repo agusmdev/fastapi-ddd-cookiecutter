@@ -2,7 +2,7 @@
 from app.core.db_repositories import BaseRepository
 
 from .models import Entity, EntityDB
-
+from .schemas import EntityUpdate
 
 class EntityService:
     """Service to interact with entity collection.
@@ -21,3 +21,9 @@ class EntityService:
         new_entity = EntityDB(**entity.dict())
         await self.entity_repo.save(new_entity)
         return new_entity
+
+    async def update_entity(self, updated_entity: EntityUpdate):
+        return await self.entity_repo.update(updated_entity)
+
+    async def delete_entity(self, entity_id: str):
+        await self.entity_repo.delete(entity_id)

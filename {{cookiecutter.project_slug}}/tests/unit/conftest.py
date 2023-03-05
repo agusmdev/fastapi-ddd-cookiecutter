@@ -1,6 +1,5 @@
 from asyncio import get_event_loop
 
-import pytest
 import pytest_asyncio
 from dependency_injector import providers
 from httpx import AsyncClient
@@ -8,8 +7,6 @@ from httpx import AsyncClient
 from app.apis.containers import AppContainer
 from app.apis.repositories import get_repository
 from app.main import create_app
-
-
 
 
 @pytest_asyncio.fixture(scope="session")

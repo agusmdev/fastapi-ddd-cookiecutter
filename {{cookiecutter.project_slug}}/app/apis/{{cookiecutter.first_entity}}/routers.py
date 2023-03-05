@@ -2,14 +2,12 @@
 from dependency_injector.wiring import Provide, inject
 from fastapi import APIRouter, Body, HTTPException, status
 
-from .schemas import EntityCreate, EntityResponse
+from .schemas import EntityCreate, EntityResponse, EntityUpdate
 from .service import EntityService
 
 
 @inject
-def get_entity_router(
-    entity_service: EntityService = Provide["entity_container.entity_service"]
-):
+def get_entity_router(entity_service: EntityService = Provide["entity_container.entity_service"]):
     router = APIRouter()
 
     @router.post(
@@ -40,5 +38,30 @@ def get_entity_router(
             )
 
         return entity
+
+    @router.patch(
+        "/{entity_id}",
+        response_description="Update entity",
+        status_code=status.HTTP_202_ACCEPTED,
+        response_model=EntityResponse,
+    )
+    async def update_entity(entity_id: str, entity: EntityUpdate = Body(...)):
+        try:
+            return await entity_service.update_entity(entity)
+        except Exception:  # Update to named exception
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Entity {entity.entity_id} not found",
+            )
+
+    @router.delete(
+        "/{entity_id}",
+        status_code=status.HTTP_204_NO_CONTENT,
+        response_description="Delete entity",
+    )
+    async def delete_entity(
+        entity_id: str,
+    ):
+        await entity_service.delete_entity(entity_id)
 
     return router
