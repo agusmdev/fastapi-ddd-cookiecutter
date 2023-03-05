@@ -56,4 +56,4 @@ class InMemoryRepository(BaseRepository):
         return updated_item
 
     async def delete(self, item_id: str) -> None:
-        await self.session.pop(item_id, None)
+        self.session.pop(item_id, None)

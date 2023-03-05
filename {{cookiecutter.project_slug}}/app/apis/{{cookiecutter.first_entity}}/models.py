@@ -11,3 +11,6 @@ class Entity(BaseModel):
 
 class EntityDB(Entity):
     entity_id: str = Field(default_factory=lambda: uuid4().hex)
+
+    class Config:
+        orm_mode = True
