@@ -16,50 +16,52 @@ This is the backend for the {{cookiecutter.project_name|capitalize}} web applica
 ## 🧬 Project structure
 
 ```text
-  ├── cookiecutter.json
-  ├── hooks
-  │   └── post_gen_project.sh
-  └── {{cookiecutter.project_slug}}
-      ├── CONTRIBUTING.md
-      ├── LICENSE
-      ├── README.md
-      ├── app
-      │   ├── __init__.py
-      │   ├── apis
-      │   │   ├── __init__.py
-      │   │   ├── config.py
-      │   │   ├── containers.py
-      │   │   ├── repositories.py
-      │   │   ├── routers.py
-      │   │   └── {{cookiecutter.first_entity}}
-      │   │       ├── __init__.py
-      │   │       ├── container.py
-      │   │       ├── models.py
-      │   │       ├── routers.py
-      │   │       ├── schemas.py
-      │   │       └── service.py
-      │   ├── core
-      │   │   ├── __init__.py
-      │   │   ├── db.py
-      │   │   └── db_repositories.py
-      │   └── main.py
-      ├── pyproject.toml
-      ├── scripts
-      │   ├── clean.sh
-      │   ├── install.sh
-      │   ├── lint.sh
-      │   ├── run_app.sh
-      │   ├── setup_dev.sh
-      │   ├── test.sh
-      │   └── venv.sh
-      └── tests
-          ├── __init__.py
-          └── unit
-              ├── __init__.py
-              ├── conftest.py
-              ├── endpoints
-              │   └── test_{{cookiecutter.first_entity}}.py
-              └── test_repositories.py
+.
+├── LICENSE
+├── README.md
+├── cookiecutter.json
+├── hooks
+│   └── post_gen_project.sh
+└── {{cookiecutter.project_slug}}
+    ├── CONTRIBUTING.md
+    ├── LICENSE
+    ├── README.md
+    ├── app
+    │   ├── __init__.py
+    │   ├── apis
+    │   │   ├── __init__.py
+    │   │   ├── config.py
+    │   │   ├── containers.py
+    │   │   ├── repositories.py
+    │   │   ├── routers.py
+    │   │   └── {{cookiecutter.first_entity}}
+    │   │       ├── __init__.py
+    │   │       ├── container.py
+    │   │       ├── models.py
+    │   │       ├── routers.py
+    │   │       ├── schemas.py
+    │   │       └── service.py
+    │   ├── core
+    │   │   ├── __init__.py
+    │   │   └── model_factory.py
+    │   └── main.py
+    ├── pyproject.toml
+    ├── scripts
+    │   ├── clean.sh
+    │   ├── install.sh
+    │   ├── lint.sh
+    │   ├── run_app.sh
+    │   ├── setup_dev.sh
+    │   ├── test.sh
+    │   └── venv.sh
+    └── tests
+        ├── __init__.py
+        └── unit
+            ├── __init__.py
+            ├── conftest.py
+            ├── endpoints
+            │   └── test_{{cookiecutter.first_entity}}.py
+            └── test_repositories.py
 ```
 
 ## 🍴 Setup
