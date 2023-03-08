@@ -43,16 +43,9 @@ def get_entity_router(entity_service: EntityService = Provide["entity_container.
         "/{entity_id}",
         response_description="Update entity",
         status_code=status.HTTP_202_ACCEPTED,
-        response_model=EntityResponse,
     )
     async def update_entity(entity_id: str, entity: EntityUpdate = Body(...)):
-        try:
-            return await entity_service.update_entity(entity)
-        except Exception:  # Update to named exception
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Entity {entity.entity_id} not found",
-            )
+        return await entity_service.update_entity(entity)
 
     @router.delete(
         "/{entity_id}",

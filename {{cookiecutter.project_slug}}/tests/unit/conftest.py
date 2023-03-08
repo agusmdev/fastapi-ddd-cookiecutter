@@ -19,7 +19,7 @@ def event_loop():
 @pytest_asyncio.fixture(scope="session")
 async def app():
     container = AppContainer(
-        repository=providers.Singleton(get_repository, "InMemoryRepository"),
+        repository=providers.Singleton(get_repository, "MemoryRepo"),
     )
     yield create_app(container)
 

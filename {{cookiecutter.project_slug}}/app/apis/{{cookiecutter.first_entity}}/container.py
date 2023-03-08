@@ -16,9 +16,8 @@ class EntityContainer(containers.DeclarativeContainer):
     # Configure repository to use
     entity_repository = providers.Singleton(
         repository,
-        item_id="entity_id",
-        table="entitys",
-        DB_BASE_MODEL=EntityDB,
+        id_field="entity_id",
+        model=EntityDB,
     )
 
     # Configure service with repository

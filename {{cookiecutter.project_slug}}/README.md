@@ -90,7 +90,7 @@ To run the service locally, execute the following script:
 This command will start the service on port 8000.
 
 
-## 🔧 Comandos
+## 🔧 Scripts
 
 This is the list of commands implemented to facilitate the development of this project:
 

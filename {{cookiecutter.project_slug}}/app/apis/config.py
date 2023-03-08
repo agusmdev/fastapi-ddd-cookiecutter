@@ -17,7 +17,7 @@ class ServerSettings(BaseSettings):
 
 class DatabaseSettings(BaseSettings):
     DB_NAME: str = "{{cookiecutter.project_name| lower}}"
-    REPOSITORY_NAME: str = Field(default="InMemoryRepository")
+    REPOSITORY_NAME: str = Field(default="MemoryRepo")
 
 
 class CORSSettings(BaseSettings):
