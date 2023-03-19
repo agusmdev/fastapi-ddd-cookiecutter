@@ -53,12 +53,10 @@ The input variables, with their default values (some auto generated) are:
 
 ### Local 
 
-To install the project locally, run the following scripts:
+To run the project locally, execute the following scripts:
 
 
 ```bash
-# Install the repository with its dependencies
-$ ./scripts/install.sh
 # Activate the environment
 $ source scripts/venv.sh
 ```
