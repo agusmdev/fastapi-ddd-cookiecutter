@@ -5,6 +5,7 @@ from uuid import uuid4
 
 from pydantic import BaseModel, Field
 
+
 class Status(str, Enum):
     STATUS_1 = "1"
     STATUS_2 = "2"
@@ -21,5 +22,6 @@ class Entity(BaseModel):
 
 class EntityDB(Entity):
     __colname__ = "entitys"
+    __id_field__ = "entity_id"
 
     entity_id: str = Field(default_factory=lambda: uuid4().hex)

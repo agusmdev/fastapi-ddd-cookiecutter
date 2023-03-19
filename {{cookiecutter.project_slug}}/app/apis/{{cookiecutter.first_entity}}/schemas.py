@@ -10,7 +10,7 @@ class EntityCreate(Entity):
 
 @optional_model
 class EntityUpdate(Entity):
-    entity_id: str
+    ...
 
 
 class EntityResponse(EntityDB):
