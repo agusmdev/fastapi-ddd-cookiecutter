@@ -8,10 +8,7 @@ def model_annotations_with_parents(model: BaseModel) -> Mapping[str, Any]:
     parent_models: List[Type] = [
         parent_model
         for parent_model in model.__bases__
-        if (
-            issubclass(parent_model, BaseModel)
-            and hasattr(parent_model, "__annotations__")
-        )
+        if (issubclass(parent_model, BaseModel) and hasattr(parent_model, "__annotations__"))
     ]
 
     annotations: Mapping[str, Any] = {}
@@ -23,11 +20,7 @@ def model_annotations_with_parents(model: BaseModel) -> Mapping[str, Any]:
     return annotations
 
 
-def optional_model_factory(
-    model: BaseModel, prefix: str = "Partial", name: str = None
-) -> BaseModel:
-    if not name:
-        name = f"{prefix}{model.__name__}"
+def optional_model_factory(model: BaseModel, name: str = None) -> BaseModel:
 
     return type(
         name,
