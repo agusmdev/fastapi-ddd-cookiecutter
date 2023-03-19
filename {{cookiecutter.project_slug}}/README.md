@@ -9,6 +9,7 @@ This is the backend for the {{cookiecutter.project_name|capitalize}} web applica
 
 - Setup and dependencies managed with [Poetry](https://python-poetry.org/) and [virtualenv](https://virtualenv.pypa.io/en/latest/)
 - Architecture based on [Repository pattern](https://www.cosmicpython.com/book/chapter_02_repository.html), with dependency injection using [Dependency Injector](https://python-dependency-injector.ets-labs.org/)
+- Repository management through [Redbird](https://github.com/Miksus/red-bird)
 - App with endpoints served through [FastAPI](https://fastapi.tiangolo.com/) + [Uvicorn](https://www.uvicorn.org/)
 - Testing managed with [pytest](https://docs.pytest.org/) (+ plugins)
 - Code style driven with [black](https://github.com/psf/black) + [ruff](https://beta.ruff.rs/docs/) 
