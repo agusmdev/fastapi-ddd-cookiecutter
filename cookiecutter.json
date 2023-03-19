@@ -2,6 +2,6 @@
     "project_name": "FastAPI DDD project",
     "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
     "project_description": "FastAPI Domain Driven Design (DDD) template",
-    "project_author": "Agustín Marchi <agusmdev@gmail.com>",
+    "author": "Agustín Marchi <agusmdev@gmail.com>",
     "first_entity": "your_first_entity"
 }

@@ -11,3 +11,4 @@ else
 fi
 
 git init --initial-branch=main
+./scripts/install.sh
