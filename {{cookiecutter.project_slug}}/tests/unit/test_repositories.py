@@ -16,4 +16,4 @@ def test_get_repository():
         get_repository("MemoryRepo", id_field="entity_id", model=EntityDB),
         MemoryRepo,
     )
-    assert get_repository("not_supported_db", "entity_id", EntityDB) == None
+    assert get_repository("not_supported_db", "entity_id", EntityDB) is None

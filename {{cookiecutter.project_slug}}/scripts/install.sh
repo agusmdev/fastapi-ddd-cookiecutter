@@ -17,5 +17,5 @@ poetry install
 poetry run pre-commit install
 
 # Install pre-push hooks
-echo "./commands/test.sh unit \\nexit \$?" > .git/hooks/pre-push
+echo "./scripts/test.sh unit \\nexit \$?" > .git/hooks/pre-push
 chmod a+x .git/hooks/pre-push

@@ -10,3 +10,4 @@ repos:
   rev: 'v0.0.253'
   hooks:
     - id: ruff
+      args: [--fix]
