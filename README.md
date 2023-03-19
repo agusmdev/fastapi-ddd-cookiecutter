@@ -16,6 +16,11 @@ This project is a backend template for a FastAPI-based application that uses the
 - Consistent structure with pre-defined naming conventions, making it easy to navigate your codebase. 
 
 
+### Working example
+
+You can check a working example of this architecture [here](https://github.com/agusmdev/todo-app) with a simple todo-app
+
+
 ### Getting Started
 
 To use this template, you first need to have cookiecutter installed. If you don't have it already, you can install it with:
@@ -46,7 +51,7 @@ The input variables, with their default values (some auto generated) are:
 * `project_slug`: The development friendly name of the project. By default, based on the project name
 * `project_description`: Short description of your project
 * `author`: Your name
-* `first_entity`: Your project's first entity, start with a ready entity with CRUD operations
+* `first_entity`: Your project's first entity, start with a ready entity with CRUD operations. `This value must be written using lowercase`
 
 
 ## 🍴 Setup after cloning the template

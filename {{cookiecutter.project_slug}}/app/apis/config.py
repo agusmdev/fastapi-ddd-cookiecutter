@@ -10,11 +10,6 @@ class CommonSettings(BaseSettings):
     DEBUG_MODE: bool = Field(default=True)
 
 
-class ServerSettings(BaseSettings):
-    HOST: str = Field(default="0.0.0.0")
-    PORT: int = Field(default=8000)
-
-
 class DatabaseSettings(BaseSettings):
     DB_NAME: str = "{{cookiecutter.project_name| lower}}"
     REPOSITORY_NAME: str = Field(default="MemoryRepo")
@@ -27,7 +22,6 @@ class CORSSettings(BaseSettings):
 
 class Settings(
     CommonSettings,
-    ServerSettings,
     DatabaseSettings,
     CORSSettings,
 ):
