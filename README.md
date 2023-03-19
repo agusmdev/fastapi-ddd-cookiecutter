@@ -13,6 +13,7 @@ This project is a backend template for a FastAPI-based application that uses the
 - [Poetry](https://python-poetry.org/) used for package management, simplifying dependency management. 
 - [Dependency Injector](https://python-dependency-injector.ets-labs.org/) included for easy service and repository injection,  reducing boilerplate code.
 - [ruff](https://beta.ruff.rs/docs/) and [black](https://github.com/psf/black) used for linting, ensuring consistent and clean code. 
+- [Pydantic Factories](https://github.com/starlite-api/pydantic-factories) for easy test mocking.
 - Consistent structure with pre-defined naming conventions, making it easy to navigate your codebase. 
 
 
