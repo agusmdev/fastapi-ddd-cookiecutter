@@ -10,5 +10,5 @@ else
     find . -type f -exec sed -i 's/Entity/{{cookiecutter.first_entity | capitalize}}/g' {} \;
 fi
 
-git init --initial-branch=main
+git init
 ./scripts/install.sh
