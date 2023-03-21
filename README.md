@@ -116,7 +116,6 @@ By default, all unit tests defined in the project will be run.
 
 ## 🤝 Contributions
 
-If you would like to contribute to the project, open a pull request or start a new issue!
+If you're interested in contributing to the project, we welcome pull requests and issue submissions!
 
-
-
+I would also like to extend a big thank you to [Leandro Acosta](https://github.com/LeandroMAcosta) and [Leandro Ferrado](https://github.com/leferrad) for their invaluable contributions to the initial development of this template.
