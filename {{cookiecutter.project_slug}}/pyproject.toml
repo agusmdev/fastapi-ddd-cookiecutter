@@ -19,10 +19,10 @@ fastapi = "^0.92.0"
 dependency-injector = "^4.41.0"
 python-dotenv = "^0.21.1"
 httpx = "^0.23.3"
-pydantic-factories = "^1.17.2"
 redbird = "^0.7.1"
 
 [tool.poetry.dev-dependencies]
+pydantic-factories = "^1.17.2"
 black = "^23.1.0"
 ruff = "^0.0.253"
 pre-commit = "^3.0.4"
