@@ -8,14 +8,18 @@ This project is a backend template for a FastAPI-based application that uses the
 - Quick and easy setup: just execute Cookiecutter and set the input variables in minutes. 
 - Setup takes only 30 seconds, getting you up and running quickly. 
 - First entity with CRUD endpoints already developed, saving you time and effort. 
-- 100% test coverage included, so you can ensure your code works as expected. 
-- Repository pattern design leverages [Redbird](https://github.com/Miksus/red-bird) implementation, supporting both NoSql and SQL  repositories
-- [Poetry](https://python-poetry.org/) used for package management, simplifying dependency management. 
+- 100% code coverage in included tests, so you can ensure your code works as expected. 
+- Repository pattern design leverages [Redbird](https://github.com/Miksus/red-bird) implementation, supporting both NoSql and SQL  repositories.
+- [Poetry](https://python-poetry.org/) used for dependency management.
 - [Dependency Injector](https://python-dependency-injector.ets-labs.org/) included for easy service and repository injection,  reducing boilerplate code.
 - [ruff](https://beta.ruff.rs/docs/) and [black](https://github.com/psf/black) used for linting, ensuring consistent and clean code. 
-- [Pydantic Factories](https://github.com/starlite-api/pydantic-factories) for easy test mocking.
+- [Pydantic Factories](https://github.com/starlite-api/pydantic-factories) for easy mocking in tests.
 - Consistent structure with pre-defined naming conventions, making it easy to navigate your codebase. 
 
+## Requirements
+
+- Python 3.8 or higher
+- Poetry 1.3 or higher
 
 ### Working example
 

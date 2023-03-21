@@ -13,7 +13,7 @@ Each new feature or change must be developed in a separate feature branch from `
 3. Create a new branch from the `develop` branch with a descriptive name that indicates the change you are making. For example: `feature/new-functionality` or `bugfix/error-in-x-functionality`.
 4. Make your changes to your branch.
 5. Make sure that all tests pass and that the code is correctly formatted. There are certain pre-commit and pre-push checks in place that will validate this, and will not let commits through that do not meet these criteria.
-6. Make commits with descriptive and consistent messages that clearly explain what you are doing in each commit. We suggest implementing the convention of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) (e.g. "fix: fixed injection in MemoryRepo", "feat: new endpoint to query nearby pets").
+6. Make commits with descriptive and consistent messages that clearly explain what you are doing in each commit. We suggest implementing the convention of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) (e.g. "fix: fixed injection in MemoryRepo", "feat: new endpoint in {{cookiecutter.first_entity}}").
 7. Publish your branch to your fork on GitHub.
 8. Create a Pull Request from your branch to the develop branch of the original repository.
 9. Wait for someone to review your Pull Request and make comments. If necessary, make changes to your branch and make more commits.

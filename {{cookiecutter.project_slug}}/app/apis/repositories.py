@@ -1,4 +1,4 @@
-"""Module to provide repositories for the pet service"""
+"""This module provides functions to dynamically retrieve and instantiate repository classes based on their names"""
 
 import sys
 from typing import Type, Union
