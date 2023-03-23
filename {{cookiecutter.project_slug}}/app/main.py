@@ -7,13 +7,12 @@ from app.apis.routers import get_app_router
 
 
 def create_app(container: AppContainer = AppContainer()) -> FastAPI:
-    container.config.from_pydantic(settings)
 
     app = FastAPI()
     app.container = container
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=[container.config.FRONTEND_URL()] + container.config.DEBUG_FRONT_URLS(),
+        allow_origins=[settings.FRONTEND_URL] + settings.DEBUG_FRONT_URLS,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],

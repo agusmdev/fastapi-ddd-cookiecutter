@@ -14,13 +14,11 @@ class AppContainer(containers.DeclarativeContainer):
 
     # Set wiring between endpoints and injected repositories
     wiring_config = containers.WiringConfiguration(modules=[entity_router])
-    # Set configuration for the app
-    config = providers.Configuration()
+
     # Setup container for entity services
     repository = providers.Singleton(get_repository, settings.REPOSITORY_NAME)
 
     entity_container = providers.Container(
         EntityContainer,
         repository=repository,
-        config=config,
     )

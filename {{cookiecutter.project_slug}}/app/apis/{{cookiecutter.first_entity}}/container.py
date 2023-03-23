@@ -9,9 +9,6 @@ from app.apis.entity.service import EntityService
 class EntityContainer(containers.DeclarativeContainer):
     """Container to serve the Entity service with the configured repository"""
 
-    # Configuration to use
-    config = providers.Configuration()
-
     repository = providers.Dependency()
     # Configure repository to use
     entity_repository = providers.Singleton(

@@ -11,12 +11,12 @@ class CommonSettings(BaseSettings):
 
 
 class DatabaseSettings(BaseSettings):
-    DB_NAME: str = "{{cookiecutter.project_name| lower}}"
+    DB_NAME: str = Field(default="{{cookiecutter.project_name| lower}}")
     REPOSITORY_NAME: str = Field(default="MemoryRepo")
 
 
 class CORSSettings(BaseSettings):
-    FRONTEND_URL: str = "http://localhost:3000"
+    FRONTEND_URL: str = Field(default="http://localhost:3000")
     DEBUG_FRONT_URLS: List[str] = []
 
 
