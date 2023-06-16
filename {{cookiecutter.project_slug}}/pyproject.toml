@@ -13,7 +13,7 @@ exclude = ["tests/*"]
 
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
+python = ">=3.8,<3.12"
 uvicorn = "^0.20.0 "
 fastapi = "^0.92.0"
 dependency-injector = "^4.41.0"
