@@ -40,7 +40,7 @@ Once you have `cookiecutter` installed, you can create a new project from this t
 
 ```bash
 
-cookiecutter https://github.com/agusmdev/fastapi-ddd-template.git
+cookiecutter https://github.com/agusmdev/fastapi-ddd-cookiecutter.git
 ```
 
 This will prompt you for some information about your new project, such as the project name and the the main entity of your project. Then it will create a new project directory based on this template.
